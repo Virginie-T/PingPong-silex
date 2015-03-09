@@ -3,12 +3,16 @@
     {
             function generatePingPongArray($input_number)
             {
-                $count = 1;
                 $ping_pong_array = array();
-                while ($count <= $input_number) {
-                    array_push($ping_pong_array, $count);
-                    $count++;
+                for ($counter = 1; $counter <= $input_number; $counter++) {
+                    if ($counter % 3 == 0) {
+                        array_push($ping_pong_array, "ping");
+                    }
+                    else {
+                        array_push($ping_pong_array, $counter);
+                    }
                 }
+
                 return $ping_pong_array;
             }
     }
